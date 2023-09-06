@@ -4,7 +4,7 @@
   --main-color: #292929;
   --max-body-width: 700px;
   --border-color: #202020;
-  --secondary-color: #393939;
+  --secondary-color: #161616;
   --loader-bullet-size: 6px;
 }
 
@@ -14,7 +14,7 @@
   --main-color: #e4e4e4;
   --max-body-width: 700px;
   --border-color: #cfcfcf;
-  --secondary-color: #969696;
+  --secondary-color: #bbbbbb;
 }
 
 * {
