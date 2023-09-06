@@ -10,9 +10,9 @@ def index(name=None):
 
 from flask import request
 
-from src.utils.ask_question_to_pdf import gpt3_completion
+from ask_question_to_pdf import gpt3_completion
 
-from src.utils.ask_question_to_pdf import ask_question_to_pdf
+from ask_question_to_pdf import ask_question_to_pdf
 
 @app.route('/prompt',methods=['POST'])
 def prompt():
@@ -23,7 +23,7 @@ def prompt():
 def question():
     return {'answer':ask_question_to_pdf()}
 
-from src.utils.ask_question_to_pdf import verification
+from ask_question_to_pdf import verification
 
 @app.route('/answer',methods=['POST'])
 def answer():
