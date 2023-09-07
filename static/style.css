@@ -17,6 +17,15 @@
   --secondary-color: #242424;
 }
 
+.barbie {
+  --body-background-color: #ff69b4;
+  --main-background-color: #ff69b4;
+  --main-color: #ffffff;
+  --max-body-width: 700px;
+  --border-color: #C0C0C0;
+  --secondary-color: #9370db;
+}
+
 * {
   box-sizing: border-box;
 }
