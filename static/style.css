@@ -38,19 +38,6 @@ body {
   font-family: sans-serif;
 }
 
-.darkbutton {
-  border: 1px solid var(--border-color);
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--main-background-color);
-  color: var(--main-color);
-  margin-top: 10px;
-  margin-right: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .main-container {
   max-width: var(--max-body-width);
   min-height: 100vh;
@@ -62,6 +49,20 @@ body {
 
 .header {
   text-align: center;
+  position:relative;
+}
+
+#darkbutton {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--main-background-color);
+  color: var(--main-color);
+  margin-top: 10px;
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .header-title {
