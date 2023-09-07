@@ -75,15 +75,29 @@ const handleQuestionClick = async (event) => {
 
 questionButton.addEventListener("click", handleQuestionClick);
 
-darkmodeButton.onclick = function() {
+darkmodeButton.onclick = function () {
   modal.style.display = "block";
 }
 
-span.onclick = function() {
+const selectMenu = document.getElementById("choix-menu");
+
+selectMenu.addEventListener("change", function () {
+  const selectedTheme = selectMenu.value;
+
+  // Supprimez toutes les classes de thème existantes sur la balise body
+  body.classList.remove("option1", "darkmode", "barbie", "option4");
+
+  // Ajoutez ou supprimez la classe de thème en fonction de l'option sélectionnée
+  if (selectedTheme !== "") {
+    body.classList.add(selectedTheme);
+  }
+});
+
+span.onclick = function () {
   modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
