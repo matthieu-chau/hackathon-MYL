@@ -3,6 +3,7 @@ const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkmode-button");
 const messagesContainer = document.getElementById("messages-container");
+const resetbutton = document.getElementById('reset-button')
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -82,3 +83,11 @@ const handleDarkmodeClick = (event) => {
 }
 
 darkmodeButton.addEventListener("click", handleDarkmodeClick);
+
+const handleresetbutton = (event) => {
+  while (messagesContainer.firstChild) {
+    messagesContainer.removeChild(messagesContainer.firstChild);
+}
+}
+
+resetbutton.addEventListener("click",handleresetbutton);
