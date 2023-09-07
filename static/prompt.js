@@ -1,7 +1,7 @@
 const promptForm = document.getElementById("prompt-form");
 const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
-const darkmodeButton = document.getElementById("darkmode-button");
+const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
 
 const appendHumanMessage = (message) => {
