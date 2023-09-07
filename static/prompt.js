@@ -3,6 +3,8 @@ const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
+const modal = document.getElementById("modal");
+const span = document.getElementsByClassName("close")[0];
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -73,12 +75,16 @@ const handleQuestionClick = async (event) => {
 
 questionButton.addEventListener("click", handleQuestionClick);
 
-const handleDarkmodeClick = (event) => {
-  document.body.classList.toggle("darkmode");
-  const elements = document.querySelectorAll('*');
-  for (const element in elements) {
-    element.classList.toggle("darkmode");
-  };
+darkmodeButton.onclick = function() {
+  modal.style.display = "block";
 }
 
-darkmodeButton.addEventListener("click", handleDarkmodeClick);
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
