@@ -6,23 +6,21 @@
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
+<button type="button" class="darkbutton" id="darkmode-button">
+  Dark mode
+</button>
 
 <body>
   <main class="main-container">
-    <button type="button" class="darkbutton" id="darkmode-button">
-      Dark mode
-    </button>
     <header class="header">
       <h1 class="header-title">Mon A.I.de mémoire</h1>
     </header>
-
     <section id="messages-container" class="messages-container">
       <div class="message message-ai">
         Je suis ton AIssistant de cours personnel ! Pose-moi une question sur
         le cours et je te répondrai.
       </div>
     </section>
-
     <form id="prompt-form" class="prompt-container">
       <label for="prompt" class="prompt-label">Message</label>
 
