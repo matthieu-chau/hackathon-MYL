@@ -2,13 +2,16 @@
 <html lang="fr">
 
 <head>
-  <title>Mon A.I.de mémoire</title>
+  <title>A.I de révision</title>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 
 <body>
   <main class="main-container">
+    <button type="button" class="darkbutton" id="darkmode-button">
+      Dark mode
+    </button>
     <header class="header">
       <h1 class="header-title">Mon A.I.de mémoire</h1>
     </header>
@@ -30,8 +33,6 @@
       <button type="button" class="button" id="question-button">
         Pose-moi une question !
       </button>
-      <button type="button" class="button" id="darkmode-button">
-        Dark mode
     </form>
 
     <script src="{{ url_for('static', filename='prompt.js') }}"></script>
