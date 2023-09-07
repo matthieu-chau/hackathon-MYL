@@ -73,7 +73,7 @@ const handleQuestionClick = async (event) => {
 
 questionButton.addEventListener("click", handleQuestionClick);
 
-const handleDarkmodeClick = (event) => {  
+const handleDarkmodeClick = (event) => {
   document.body.classList.toggle("darkmode");
   const elements = document.querySelectorAll('*');
   for (const element in elements) {
