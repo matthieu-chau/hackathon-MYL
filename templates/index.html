@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
   <title>A.I de révision</title>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
-<button type="button" class="darkbutton" id="darkmode-button">
-  Dark mode
-</button>
+
 
 <body>
   <main class="main-container">
     <header class="header">
       <h1 class="header-title">Mon A.I.de mémoire</h1>
-      <button type="button" class="darkbutton" id="darkbutton">
-        Dark mode
+      <button type="button" class="darkbutton" id="darkbutton" src="parametres.png">
+        <i class="fa fa-rocket"></i>
       </button>
     </header>
     <section id="messages-container" class="messages-container">
