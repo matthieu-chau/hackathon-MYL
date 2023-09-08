@@ -92,7 +92,9 @@ body {
 }
 
 .message-human {
-  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1px;
+  padding: 10px 15px;
 }
 
 .prompt-container {
@@ -134,6 +136,7 @@ body {
 .button:active {
   background-color: var(--body-background-color);
   cursor: pointer;
+  border-radius: 1px;
 }
 
 .hidden {
@@ -216,6 +219,11 @@ body {
 
 .colorpicker {
   display: none;
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  border-radius: 1px;
+  background-color: var(--main-background-color);
+  color: var(--main-color);
 }
 
 .upload {

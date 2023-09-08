@@ -13,7 +13,7 @@
     <header class="header">
       <h1 class="header-title">Mon A.I.de mémoire</h1>
       <button type="button" class="darkbutton" id="darkbutton">
-        <i class="fa fa-rocket"></i>
+        <i class="fa fa-gear"></i>
       </button>
     </header>
     <section id="messages-container" class="messages-container">
@@ -33,6 +33,9 @@
         Pose-moi une question !
       </button>
       <button type="button" class="button" id="reset-button">
+        <i class="fa fa-trash"></i>
+      </button>
+      <button type="button" class="button" id="change">
         <i class="fa fa-refresh"></i>
       </button>
     </form>
@@ -47,14 +50,14 @@
           <option value="barbie">Barbie</option>
           <option value="custom">Custom</option>
         </select>
-        <form>
+          <label class="labelcolor" for="couleur-fond" id="labelcolor1">Arrière-plan </label>
+          <input class="colorpicker" type="color" id="colorpicker1" name="couleur-fond" value="#ff0000">
+          <label class="labelcolor" for="couleur-fond" id="labelcolor2">Texte </label>
+          <input class="colorpicker" type="color" id="colorpicker2" name="couleur-fond" value="#ff0000">
+          <form>
           <input type="file" id="file" class="upload" name="newfile">
           <input type="submit" id="submit-file">
         </form>
-        <label class="labelcolor" for="couleur-fond" id="labelcolor1">Arrière plan :</label>
-        <input class="colorpicker" type="color" id="colorpicker1" name="couleur-fond" value="#ff0000">
-        <label class="labelcolor" for="couleur-fond" id="labelcolor2"> :Texte</label>
-        <input class="colorpicker" type="color" id="colorpicker2" name="couleur-fond" value="#ff0000">
       </div>
     </div>
 
