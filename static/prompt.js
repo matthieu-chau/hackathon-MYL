@@ -117,9 +117,14 @@ const handleselectMenu = async (event) => {
 selectMenu.addEventListener("change", handleselectMenu);
 
 const handlebackgroundcolor = async (event) => {
+}
 
+span.onclick = function () {
+  modal.style.display = "none";
+}
 
-  span.onclick = function () {
+window.onclick = function (event) {
+  if (event.target == modal) {
     modal.style.display = "none";
   }
 

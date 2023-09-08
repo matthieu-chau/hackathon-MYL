@@ -8,6 +8,15 @@
   --loader-bullet-size: 6px;
 }
 
+.lightmode {
+  --body-background-color: #e4e4e4;
+  --main-background-color: #e4e4e4;
+  --main-color: #292929;
+  --max-body-width: 700px;
+  --border-color: #202020;
+  --secondary-color: #d0d0d0;
+}
+
 .darkmode {
   --body-background-color: #292929;
   --main-background-color: #292929;
@@ -193,7 +202,23 @@ body {
   /* Could be more or less, depending on screen size */
 }
 
+<<<<<<< HEAD
+.choix-menu {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--main-background-color);
+  color: var(--main-color);
+}
+
+.labelcolor {
+  display: none;
+}
+
+.colorpicker {
+=======
 .upload {
+>>>>>>> 99b02536cd83574cee9326641b8cbec26f2d7bc8
   display: none;
 }
 
