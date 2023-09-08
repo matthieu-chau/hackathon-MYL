@@ -5,6 +5,8 @@ const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
 const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("close")[0];
+const labelcolor1 = document.getElementById("labelcolor1");
+const colorpicker1 = document.getElementById("colorpicker1");
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -81,24 +83,38 @@ darkmodeButton.onclick = function () {
 
 const selectMenu = document.getElementById("choix-menu");
 
-selectMenu.addEventListener("change", function () {
+const handleselectMenu = async (event) => {
   const selectedTheme = selectMenu.value;
+  const elements = document.querySelectorAll("*");
+  for (const element in elements) {
+    if (elements[element].classList) {
+      if (selectedTheme === "custom") {
+        labelcolor1.style.display = "block";
+        colorpicker1.style.display = "inline-block";
+        elements[element].classList.remove("darkmode", "lightmode", "barbie");
+      }
+      else {
+        labelcolor1.style.display = "none";
+        colorpicker1.style.display = "none";
+        elements[element].classList.remove("darkmode", "lightmode", "barbie");
+        elements[element].classList.add(selectedTheme);
+      }
 
-  // Supprimez toutes les classes de thème existantes sur la balise body
-  body.classList.remove("option1", "darkmode", "barbie", "option4");
-
-  // Ajoutez ou supprimez la classe de thème en fonction de l'option sélectionnée
-  if (selectedTheme !== "") {
-    body.classList.add(selectedTheme);
+    }
   }
-});
+};
 
-span.onclick = function () {
-  modal.style.display = "none";
-}
+selectMenu.addEventListener("change", handleselectMenu);
 
-window.onclick = function (event) {
-  if (event.target == modal) {
+const handlebackgroundcolor = async (event) => {
+
+
+  span.onclick = function () {
     modal.style.display = "none";
   }
-}
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
