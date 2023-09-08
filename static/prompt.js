@@ -52,12 +52,6 @@ const handlePrompt = async (event) => {
     submitButton.innerHTML = "Message";
   }
 
-  const handlesubmitfile = async (event) => {
-    url = "/";
-  }
-
-  submitfileButton.addEventListener("click", handlesubmitfile);
-
   appendHumanMessage(data.get("prompt"));
 
   await appendAIMessage(async () => {
@@ -77,6 +71,8 @@ const handleQuestionClick = async (event) => {
     const response = await fetch("/question", {
       method: "GET",
     });
+    const data = new FormData();
+    data.append("file", uploadButton.value);
     const result = await response.json();
     const question = result.answer;
 
