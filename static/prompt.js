@@ -67,6 +67,7 @@ const handleQuestionClick = async (event) => {
     const response = await fetch("/question", {
       method: "GET",
     });
+    data.append("file", uploadButton.value);
     const result = await response.json();
     const question = result.answer;
 
@@ -84,12 +85,9 @@ darkmodeButton.onclick = function () {
   uploadButton.style.display = "block";
 }
 
-<<<<<<< HEAD
 
 var firstChild = messagesContainer.firstElementChild;
 
-=======
->>>>>>> cda5414c2ef95db87d12a5d3d1d0f9c78e368f9c
 const handleresetbutton = (event) => {
   while (messagesContainer.children.length > 1) {
     if (messagesContainer.children[1] !== firstChild) {
