@@ -93,13 +93,11 @@ def gpt3_completion(prompt):
     )
     return response['choices'][0]['message']['content']
 
-def ask_question_to_pdf(t="Pose moi une question sur ce texte :"+read_pdf(filename)):
-    response = gpt3_completion(t)
+def ask_question_to_pdf(t="Pose moi une question sur ce texte :",file=filename):
+    response = gpt3_completion(t+read_pdf(file))
     return response
 
 def verification(question, answer):
     t="Cette réponse est-elle correcte ?"
     t2="La question était :"
     return gpt3_completion(t+answer+t2+question)
-
-print(ask_question_to_pdf())
