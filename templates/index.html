@@ -36,13 +36,17 @@
     <div id="modal" class="modal">
       <div class="modal-content">
         <p>PARAMETRES</p>
-        <label for="choix-menu">Sélectionnez un thème :</label>
+        <label for="choix-menu">Thème</label>
         <select id="choix-menu" name="choix-menu">
           <option value="option1">Clair</option>
           <option value="darkmode">Sombre</option>
           <option value="barbie">Barbie</option>
           <option value="option4">Option 4</option>
         </select>
+        <form action="/action_page.php">
+          <input type="file" id="file" class="upload" name="newfile">
+          <input type="submit">
+        </form>
         <span class="close">&times;</span>
       </div>
     </div>

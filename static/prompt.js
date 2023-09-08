@@ -3,6 +3,7 @@ const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
+const uploadButton = document.getElementById("file");
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -75,6 +76,7 @@ questionButton.addEventListener("click", handleQuestionClick);
 
 darkmodeButton.onclick = function () {
   modal.style.display = "block";
+  uploadButton.style.display = "block";
 }
 
 const selectMenu = document.getElementById("choix-menu");

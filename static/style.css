@@ -193,6 +193,10 @@ body {
   /* Could be more or less, depending on screen size */
 }
 
+.upload {
+  display: none;
+}
+
 /* The Close Button */
 .close {
   color: #aaa;
