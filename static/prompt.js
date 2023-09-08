@@ -4,6 +4,7 @@ const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
 const uploadButton = document.getElementById("file");
+const submitfileButton = document.getElementById("submit-file");
 const resetbutton = document.getElementById('reset-button')
 const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("close")[0];
@@ -12,6 +13,9 @@ const colorpicker1 = document.getElementById("colorpicker1");
 const change = document.getElementById('change');
 var save1 = messagesContainer.children;
 var save2 = messagesContainer.children;
+const labelcolor2 = document.getElementById("labelcolor2");
+const colorpicker2 = document.getElementById("colorpicker2");
+
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -50,6 +54,12 @@ const handlePrompt = async (event) => {
     questionButton.classList.remove("hidden");
     submitButton.innerHTML = "Message";
   }
+
+  const handlesubmitfile = async (event) => {
+    url = "/";
+  }
+
+  submitfileButton.addEventListener("click", handlesubmitfile);
 
   appendHumanMessage(data.get("prompt"));
 
@@ -134,11 +144,15 @@ const handleselectMenu = async (event) => {
       if (selectedTheme === "custom") {
         labelcolor1.style.display = "inline";
         colorpicker1.style.display = "inline";
+        labelcolor2.style.display = "inline";
+        colorpicker2.style.display = "inline";
         elements[element].classList.remove("darkmode", "lightmode", "barbie");
       }
       else {
         labelcolor1.style.display = "none";
         colorpicker1.style.display = "none";
+        labelcolor2.style.display = "none";
+        colorpicker2.style.display = "none";
         elements[element].classList.remove("darkmode", "lightmode", "barbie");
         elements[element].classList.add(selectedTheme);
       }
@@ -152,10 +166,26 @@ selectMenu.addEventListener("change", handleselectMenu);
 const handlebackgroundcolor = async (event) => {
   const selectedColor = colorpicker1.value;
   const elements = document.querySelectorAll("*");
-  elements.style.backgroundColor = selectedColor;
+  for (const element in elements) {
+    if (elements[element].classList) {
+      elements[element].style.backgroundColor = selectedColor;
+    }
+  }
 }
 
 colorpicker1.addEventListener("change", handlebackgroundcolor);
+
+const handletextcolor = async (event) => {
+  const selectedColor = colorpicker2.value;
+  const elements = document.querySelectorAll("*");
+  for (const element in elements) {
+    if (elements[element].classList) {
+      elements[element].style.color = selectedColor;
+    }
+  }
+}
+
+colorpicker2.addEventListener("change", handletextcolor);
 
 span.onclick = function () {
   modal.style.display = "none";

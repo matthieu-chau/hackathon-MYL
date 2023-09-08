@@ -93,7 +93,7 @@ def gpt3_completion(prompt):
     )
     return response['choices'][0]['message']['content']
 
-def ask_question_to_pdf(t="Pose moi une question sur ce texte :",file=filename):
+def ask_question_to_pdf(t="Pose moi une question sur ce texte :"+read_pdf(filename)):
     response = gpt3_completion(t+read_pdf(file))
     return response
 
