@@ -3,6 +3,7 @@ const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
+const resetbutton = document.getElementById('reset-button')
 const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("close")[0];
 const labelcolor1 = document.getElementById("labelcolor1");
@@ -81,6 +82,14 @@ darkmodeButton.onclick = function () {
   modal.style.display = "block";
 }
 
+
+const handleresetbutton = (event) => {
+  while (messagesContainer.firstChild) {
+    messagesContainer.removeChild(messagesContainer.firstChild);
+  }
+}
+
+resetbutton.addEventListener("click", handleresetbutton);
 const selectMenu = document.getElementById("choix-menu");
 
 const handleselectMenu = async (event) => {
