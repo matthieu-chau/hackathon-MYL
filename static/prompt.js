@@ -117,19 +117,19 @@ const handlechange = (event) => {
     messagesContainer.removeChild(messagesContainer.firstChild);
   }
 
-  messagesContainer.children = save2;
-  save2 = save1;
-
   var i = 0;
-  while(i < messagesContainer.children.length){
+  while(i < save2.children.length){
     if (i%2 === 0){
-      appendHumanMessage(toString(save2.children[i]));
+      appendHumanMessage(save2.children[i].innerText);
     }
     else{
-      appendAIMessage(toString(save2.children[i]));
+      appendAIMessage(save2.children[i].innerText);
     }
     i = i + 1;
   }
+
+  messagesContainer.children = save2;
+  save2 = save1;
 };
 
 change.addEventListener("click", handlechange);
