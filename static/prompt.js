@@ -82,8 +82,6 @@ questionButton.addEventListener("click", handleQuestionClick);
 darkmodeButton.onclick = function () {
   modal.style.display = "block";
   uploadButton.style.display = "block";
-  labelcolor1.style.display = "none";
-  colorpicker1.style.display = "none";
 }
 
 
