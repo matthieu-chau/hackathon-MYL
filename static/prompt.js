@@ -12,10 +12,6 @@ const labelcolor1 = document.getElementById("labelcolor1");
 const colorpicker1 = document.getElementById("colorpicker1");
 const labelcolor2 = document.getElementById("labelcolor2");
 const colorpicker2 = document.getElementById("colorpicker2");
-const labelcolor3 = document.getElementById("labelcolor3");
-const colorpicker3 = document.getElementById("colorpicker3");
-const labelcolor4 = document.getElementById("labelcolor4");
-const colorpicker4 = document.getElementById("colorpicker4");
 
 
 const appendHumanMessage = (message) => {
@@ -57,8 +53,7 @@ const handlePrompt = async (event) => {
   }
 
   const handlesubmitfile = async (event) => {
-    let url = "/";
-    data.append("file", uploadButton.value);
+    url = "/";
   }
 
   submitfileButton.addEventListener("click", handlesubmitfile);
@@ -127,10 +122,6 @@ const handleselectMenu = async (event) => {
         colorpicker1.style.display = "inline-block";
         labelcolor2.style.display = "inline-block";
         colorpicker2.style.display = "inline-block";
-        labelcolor3.style.display = "inline-block";
-        colorpicker3.style.display = "inline-block";
-        labelcolor4.style.display = "inline-block";
-        colorpicker4.style.display = "inline-block";
         elements[element].classList.remove("darkmode", "lightmode", "barbie");
       }
       else {
@@ -138,10 +129,6 @@ const handleselectMenu = async (event) => {
         colorpicker1.style.display = "none";
         labelcolor2.style.display = "none";
         colorpicker2.style.display = "none";
-        labelcolor3.style.display = "none";
-        colorpicker3.style.display = "none";
-        labelcolor4.style.display = "none";
-        colorpicker4.style.display = "none";
         elements[element].classList.remove("darkmode", "lightmode", "barbie");
         elements[element].classList.add(selectedTheme);
       }
@@ -175,30 +162,6 @@ const handletextcolor = async (event) => {
 }
 
 colorpicker2.addEventListener("change", handletextcolor);
-
-const handlebordercolor = async (event) => {
-  const selectedColor = colorpicker3.value;
-  const elements = document.querySelectorAll("*");
-  for (const element in elements) {
-    if (elements[element].classList) {
-      elements[element].style.bordercolor = selectedColor;
-    }
-  }
-}
-
-colorpicker3.addEventListener("change", handlebordercolor);
-
-const handlesecondarycolor = async (event) => {
-  const selectedColor = colorpicker4.value;
-  const elements = document.querySelectorAll("*");
-  for (const element in elements) {
-    if (elements[element].classList) {
-      elements[element].style.secondarycolor = selectedColor;
-    }
-  }
-}
-
-colorpicker4.addEventListener("change", handlesecondarycolor);
 
 span.onclick = function () {
   modal.style.display = "none";
