@@ -84,7 +84,6 @@ darkmodeButton.onclick = function () {
   uploadButton.style.display = "block";
 }
 
-
 const handleresetbutton = (event) => {
   while (messagesContainer.firstChild) {
     messagesContainer.removeChild(messagesContainer.firstChild);
@@ -129,3 +128,4 @@ const handlebackgroundcolor = async (event) => {
       modal.style.display = "none";
     }
   }
+}
