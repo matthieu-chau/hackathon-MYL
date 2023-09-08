@@ -87,11 +87,19 @@ darkmodeButton.onclick = function () {
 }
 
 
+var firstChild = messagesContainer.firstElementChild;
+
 const handleresetbutton = (event) => {
-  while (messagesContainer.firstChild) {
-    messagesContainer.removeChild(messagesContainer.firstChild);
+  while (messagesContainer.children.length > 1) {
+    if (messagesContainer.children[1] !== firstChild) {
+      messagesContainer.removeChild(messagesContainer.children[1]);
+    } else {
+      break;
+    }
+
   }
 }
+
 
 resetbutton.addEventListener("click", handleresetbutton);
 const selectMenu = document.getElementById("choix-menu");
