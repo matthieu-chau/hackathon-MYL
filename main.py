@@ -21,7 +21,7 @@ def prompt():
 
 @app.route('/question',methods=['GET'])
 def question():
-    return {'answer':ask_question_to_pdf(,request.form['file'])}
+    return {'answer':ask_question_to_pdf(request.form['file'])}
 
 from ask_question_to_pdf import verification
 
