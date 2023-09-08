@@ -33,6 +33,11 @@ const appendAIMessage = async (messagePromise) => {
   loaderElement.innerHTML = messageToAppend;
 };
 
+const handleSubmit = async (event) => {
+  let url = "/";
+  data.append("file", uploadButton.value);
+}
+
 const handlePrompt = async (event) => {
   event.preventDefault();
   // Parse form data in a structured object
@@ -67,7 +72,6 @@ const handleQuestionClick = async (event) => {
     const response = await fetch("/question", {
       method: "GET",
     });
-    data.append("file", uploadButton.value);
     const result = await response.json();
     const question = result.answer;
 
