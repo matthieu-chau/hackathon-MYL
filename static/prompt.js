@@ -3,6 +3,7 @@ const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
+const uploadButton = document.getElementById("file");
 const resetbutton = document.getElementById('reset-button')
 const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("close")[0];
@@ -80,6 +81,7 @@ questionButton.addEventListener("click", handleQuestionClick);
 
 darkmodeButton.onclick = function () {
   modal.style.display = "block";
+  uploadButton.style.display = "block";
 }
 
 
@@ -116,14 +118,14 @@ const handleselectMenu = async (event) => {
 selectMenu.addEventListener("change", handleselectMenu);
 
 const handlebackgroundcolor = async (event) => {
+}
 
+span.onclick = function () {
+  modal.style.display = "none";
+}
 
-  span.onclick = function () {
+window.onclick = function (event) {
+  if (event.target == modal) {
     modal.style.display = "none";
   }
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+}
