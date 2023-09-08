@@ -9,6 +9,9 @@ const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("close")[0];
 const labelcolor1 = document.getElementById("labelcolor1");
 const colorpicker1 = document.getElementById("colorpicker1");
+const change = document.getElementById('change');
+var save1 = messagesContainer.children;
+var save2 = messagesContainer.children;
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -84,22 +87,43 @@ darkmodeButton.onclick = function () {
   uploadButton.style.display = "block";
 }
 
-
-var firstChild = messagesContainer.firstElementChild;
-
 const handleresetbutton = (event) => {
+  var firstChild = messagesContainer.firstElementChild;
   while (messagesContainer.children.length > 1) {
     if (messagesContainer.children[1] !== firstChild) {
       messagesContainer.removeChild(messagesContainer.children[1]);
     } else {
       break;
     }
-
   }
 }
 
-
 resetbutton.addEventListener("click", handleresetbutton);
+
+const handlechange = (event) => {
+  save1 = messagesContainer.children;
+
+  while (messagesContainer.firstChild) {
+    messagesContainer.removeChild(messagesContainer.firstChild);
+  }
+
+  messagesContainer.children = save2;
+  save2 = save1;
+
+  var i = 0;
+  while(i < messagesContainer.children.length){
+    if (i%2 === 0){
+      appendHumanMessage(toString(save2.children[i]));
+    }
+    else{
+      appendAIMessage(toString(save2.children[i]));
+    }
+    i = i + 1;
+  }
+};
+
+change.addEventListener("click", handlechange);
+
 const selectMenu = document.getElementById("choix-menu");
 
 const handleselectMenu = async (event) => {
@@ -108,8 +132,8 @@ const handleselectMenu = async (event) => {
   for (const element in elements) {
     if (elements[element].classList) {
       if (selectedTheme === "custom") {
-        labelcolor1.style.display = "block";
-        colorpicker1.style.display = "inline-block";
+        labelcolor1.style.display = "inline";
+        colorpicker1.style.display = "inline";
         elements[element].classList.remove("darkmode", "lightmode", "barbie");
       }
       else {
@@ -140,11 +164,5 @@ span.onclick = function () {
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
-  }
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
   }
 }
