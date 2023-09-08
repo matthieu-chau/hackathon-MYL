@@ -27,12 +27,12 @@
 }
 
 .barbie {
-  --body-background-color: #ff69b4;
-  --main-background-color: #ff69b4;
+  --body-background-color: #e0218a;
+  --main-background-color: #e0218a;
   --main-color: #ffffff;
   --max-body-width: 700px;
   --border-color: #C0C0C0;
-  --secondary-color: #9370db;
+  --secondary-color: #ba1570;
 }
 
 * {
@@ -64,7 +64,7 @@ body {
 #darkbutton {
   border: 1px solid var(--border-color);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 1px;
   background-color: var(--main-background-color);
   color: var(--main-color);
   margin-top: 10px;
@@ -87,7 +87,7 @@ body {
 
 .message {
   border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 1px;
   padding: 10px 15px;
 }
 
@@ -118,14 +118,14 @@ body {
   border: 1px solid var(--border-color);
   color: var(--main-color);
   background-color: var(--main-background-color);
-  border-radius: 5px;
+  border-radius: 1px;
   padding: 5px;
 }
 
 .button {
   border: 1px solid var(--border-color);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 1px;
   background-color: var(--main-background-color);
   color: var(--main-color);
 }
@@ -205,7 +205,7 @@ body {
 .choix-menu {
   border: 1px solid var(--border-color);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 1px;
   background-color: var(--main-background-color);
   color: var(--main-color);
 }
