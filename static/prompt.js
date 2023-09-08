@@ -82,6 +82,8 @@ questionButton.addEventListener("click", handleQuestionClick);
 darkmodeButton.onclick = function () {
   modal.style.display = "block";
   uploadButton.style.display = "block";
+  labelcolor1.style.display = "none";
+  colorpicker1.style.display = "none";
 }
 
 
@@ -118,7 +120,12 @@ const handleselectMenu = async (event) => {
 selectMenu.addEventListener("change", handleselectMenu);
 
 const handlebackgroundcolor = async (event) => {
+  const selectedColor = colorpicker1.value;
+  const elements = document.querySelectorAll("*");
+  elements.style.backgroundColor = selectedColor;
 }
+
+colorpicker1.addEventListener("change", handlebackgroundcolor);
 
 span.onclick = function () {
   modal.style.display = "none";
