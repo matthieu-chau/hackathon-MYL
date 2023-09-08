@@ -30,7 +30,3 @@ def answer():
     question = request.form['question']
     prompt = request.form['prompt']
     return {'answer':verification(question, prompt)}
-
-@app.route('/newfile',methods=['POST'])
-def question():
-    return {'answer':ask_question_to_pdf()}
