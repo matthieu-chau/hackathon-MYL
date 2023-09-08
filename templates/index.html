@@ -32,21 +32,26 @@
       <button type="button" class="button" id="question-button">
         Pose-moi une question !
       </button>
+      <button type="button" class="button" id="reset-button">
+        reset...
+      </button>
     </form>
     <div id="modal" class="modal">
       <div class="modal-content">
         <p>PARAMETRES</p>
-        <label for="choix-menu">Thème</label>
-        <select id="choix-menu" name="choix-menu">
-          <option value="option1">Clair</option>
+        <label for="choix-menu">Sélectionnez un thème :</label>
+        <select class="choix-menu" id="choix-menu" name="choix-menu">
+          <option value="lightmode">Clair</option>
           <option value="darkmode">Sombre</option>
           <option value="barbie">Barbie</option>
-          <option value="option4">Option 4</option>
+          <option value="custom">Custom</option>
         </select>
         <form action="/action_page.php">
           <input type="file" id="file" class="upload" name="newfile">
           <input type="submit">
         </form>
+        <label class="labelcolor" for="couleur-fond" id="labelcolor1">Background color :</label><input
+          class="colorpicker" type="color" id="colorpicker1" name="couleur-fond" value="#ff0000">
         <span class="close">&times;</span>
       </div>
     </div>
