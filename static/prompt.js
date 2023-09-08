@@ -84,9 +84,12 @@ darkmodeButton.onclick = function () {
   uploadButton.style.display = "block";
 }
 
+<<<<<<< HEAD
 
 var firstChild = messagesContainer.firstElementChild;
 
+=======
+>>>>>>> cda5414c2ef95db87d12a5d3d1d0f9c78e368f9c
 const handleresetbutton = (event) => {
   while (messagesContainer.children.length > 1) {
     if (messagesContainer.children[1] !== firstChild) {
@@ -140,5 +143,11 @@ span.onclick = function () {
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 }

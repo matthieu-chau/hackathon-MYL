@@ -217,6 +217,9 @@ body {
 .colorpicker {
   display: none;
 }
+.upload {
+  display: none;
+}
 
 /* The Close Button */
 .close {
