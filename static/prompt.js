@@ -3,8 +3,6 @@ const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
-const modal = document.getElementById("modal");
-const span = document.getElementsByClassName("close")[0];
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -74,17 +72,3 @@ const handleQuestionClick = async (event) => {
 };
 
 questionButton.addEventListener("click", handleQuestionClick);
-
-darkmodeButton.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
