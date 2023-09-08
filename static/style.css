@@ -202,7 +202,6 @@ body {
   /* Could be more or less, depending on screen size */
 }
 
-<<<<<<< HEAD
 .choix-menu {
   border: 1px solid var(--border-color);
   padding: 5px;
@@ -216,9 +215,9 @@ body {
 }
 
 .colorpicker {
-=======
+  display: none;
+}
 .upload {
->>>>>>> 99b02536cd83574cee9326641b8cbec26f2d7bc8
   display: none;
 }
 
