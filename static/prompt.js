@@ -1,9 +1,11 @@
 const promptForm = document.getElementById("prompt-form");
 const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
-const darkmodeButton = document.getElementById("darkmode-button");
+const darkmodeButton = document.getElementById("darkbutton");
 const messagesContainer = document.getElementById("messages-container");
 const resetbutton = document.getElementById('reset-button')
+const modal = document.getElementById("modal");
+const span = document.getElementsByClassName("close")[0];
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -74,15 +76,10 @@ const handleQuestionClick = async (event) => {
 
 questionButton.addEventListener("click", handleQuestionClick);
 
-const handleDarkmodeClick = (event) => {
-  document.body.classList.toggle("darkmode");
-  const elements = document.querySelectorAll('*');
-  for (const element in elements) {
-    element.classList.toggle("darkmode");
-  };
+darkmodeButton.onclick = function () {
+  modal.style.display = "block";
 }
 
-darkmodeButton.addEventListener("click", handleDarkmodeClick);
 
 const handleresetbutton = (event) => {
   while (messagesContainer.firstChild) {
@@ -91,3 +88,26 @@ const handleresetbutton = (event) => {
 }
 
 resetbutton.addEventListener("click",handleresetbutton);
+const selectMenu = document.getElementById("choix-menu");
+
+selectMenu.addEventListener("change", function () {
+  const selectedTheme = selectMenu.value;
+
+  // Supprimez toutes les classes de thème existantes sur la balise body
+  body.classList.remove("option1", "darkmode", "barbie", "option4");
+
+  // Ajoutez ou supprimez la classe de thème en fonction de l'option sélectionnée
+  if (selectedTheme !== "") {
+    body.classList.add(selectedTheme);
+  }
+});
+
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
   <title>A.I de révision</title>
@@ -11,18 +12,16 @@
   <main class="main-container">
     <header class="header">
       <h1 class="header-title">Mon A.I.de mémoire</h1>
-      <button type="button" class="darkbutton" id="darkbutton">
-        Dark mode
+      <button type="button" class="darkbutton" id="darkbutton" src="parametres.png">
+        <i class="fa fa-rocket"></i>
       </button>
     </header>
-
     <section id="messages-container" class="messages-container">
       <div class="message message-ai">
         Je suis ton AIssistant de cours personnel ! Pose-moi une question sur
         le cours et je te répondrai.
       </div>
     </section>
-
     <form id="prompt-form" class="prompt-container">
       <label for="prompt" class="prompt-label">Message</label>
 
@@ -37,6 +36,19 @@
         reset...
       </button>
     </form>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>PARAMETRES</p>
+        <label for="choix-menu">Sélectionnez un thème :</label>
+        <select id="choix-menu" name="choix-menu">
+          <option value="option1">Clair</option>
+          <option value="darkmode">Sombre</option>
+          <option value="barbie">Barbie</option>
+          <option value="option4">Option 4</option>
+        </select>
+        <span class="close">&times;</span>
+      </div>
+    </div>
 
     <script src="{{ url_for('static', filename='prompt.js') }}"></script>
   </main>
