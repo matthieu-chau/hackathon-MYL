@@ -30,3 +30,5 @@ def answer():
     question = request.form['question']
     prompt = request.form['prompt']
     return {'answer':verification(question, prompt)}
+
+print(ask_question_to_pdf)
