@@ -92,7 +92,7 @@ body {
 }
 
 .message-human {
-  background-color: var(--secondary-color);
+  background-color: var(--body-background-color);
 }
 
 .prompt-container {
@@ -216,6 +216,11 @@ body {
 
 .colorpicker {
   display: none;
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  border-radius: 1px;
+  background-color: var(--main-background-color);
+  color: var(--main-color);
 }
 
 .upload {
