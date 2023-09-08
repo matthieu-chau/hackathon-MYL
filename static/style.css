@@ -8,6 +8,15 @@
   --loader-bullet-size: 6px;
 }
 
+.lightmode {
+  --body-background-color: #e4e4e4;
+  --main-background-color: #e4e4e4;
+  --main-color: #292929;
+  --max-body-width: 700px;
+  --border-color: #202020;
+  --secondary-color: #d0d0d0;
+}
+
 .darkmode {
   --body-background-color: #292929;
   --main-background-color: #292929;
@@ -191,6 +200,22 @@ body {
   border: 1px solid var(--border-color);
   width: 80%;
   /* Could be more or less, depending on screen size */
+}
+
+.choix-menu {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--main-background-color);
+  color: var(--main-color);
+}
+
+.labelcolor {
+  display: none;
+}
+
+.colorpicker {
+  display: none;
 }
 
 /* The Close Button */
